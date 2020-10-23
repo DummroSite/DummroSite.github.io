@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -19,6 +18,12 @@
 			function Update(){
 				rotationDiv_div_rotation += 5;
 				document.getElementById("rotationDiv_div").style.transform = "rotate(" + rotationDiv_div_rotation + "deg)";
+				document.getElementById("screamer").style.top = document.documentElement.scrollTop + "px";
+			}
+			
+			function Scream(){
+				document.getElementById("screamer").style.visibility = "visible";
+				setTimeout(function(){document.getElementById("screamer").style.visibility = "hidden";}, 1000);
 			}
 		</script>
 		<style>
@@ -263,16 +268,20 @@
      }<Br>
      return null<Br>
     }</code></p>
+			<br>
+			<hr>
+			<br>
+			<h1>ПОСТРОИТЬ ЛИНЕЙНЫЙ ГРАФИК ФУНКЦИИ</h1>
+			<br>
+			<input type="text" placeholder="Ахаахаахахахя пошутиииииил">
+			<br>
+			<br>
+			<hr>
+			<br>
+			<input type="button" onclick="Scream()" value="Паказать скримир">
 		</div>
-		<br>
-		<hr>
-		<br>
-		<h1>ПОСТРОИТЬ ЛИНЕЙНЫЙ ГРАФИК ФУНКЦИИ</h1>
-		<br>
-		<input type="text" placeholder="Ахаахаахахахя пошутиииииил">
-		<br>
-		<br>
-		<hr>
-		<br>
+		<div id="screamer" style="width: 100vw; height: 100vh; position: absolute; background-image: url(sheet.jpg); z-index: 100; visibility: hidden">
+			<h1>ss</h1>
+		</div>
 	</body>
 </html>
